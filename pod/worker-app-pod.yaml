@@ -1,0 +1,12 @@
+# since there is no services listening to worker we dont need to set a port
+apiVersion: v1
+kind: Pod
+metadata:
+  name: worker-app-pod
+  labels:
+    name: worker-app-pod
+    app: demo-voting-app
+spec:
+  containers:
+  - name: worker-app
+    image: dockersamples/examplevotingapp_worker
